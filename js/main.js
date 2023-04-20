@@ -35,9 +35,26 @@ if(window.location.search.includes("bevegelse")){
 } 
 
 // once the window loads...
+window.onload = function(){
 
+    // game configuration object
+var gameConfig = {
 
-    //clipped
+    // render type
+    type: Phaser.CANVAS,
+
+    // game width, in pixels
+    width: 1280,
+
+    // game height, in pixels
+    height: 720,
+
+    // game background color
+    backgroundColor: 0x880044,
+
+    // scenes used by the game
+    scene: [playGame]
+};
 
     // game constructor
     game = new Phaser.Game(gameConfig);
@@ -47,7 +64,7 @@ if(window.location.search.includes("bevegelse")){
     resize();
     window.addEventListener("resize", resize, false);
 
-
+}
 // PlayGame scene
 class playGame extends Phaser.Scene {
 
@@ -168,24 +185,7 @@ class playGame extends Phaser.Scene {
     }
 }
 
-// game configuration object
-var gameConfig = {
 
-    // render type
-    type: Phaser.CANVAS,
-
-    // game width, in pixels
-    width: 1280,
-
-    // game height, in pixels
-    height: 720,
-
-    // game background color
-    backgroundColor: 0x880044,
-
-    // scenes used by the game
-    scene: [playGame]
-};
 
 // pure javascript to scale the game
 function resize() {
