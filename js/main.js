@@ -25,7 +25,7 @@ if(window.location.search.includes("bevegelse")){
         rotationTime: 3000
     }
 } else if(window.location.search.includes("diverse")){
-    targetWhelImage = "../Images/diverse.png"
+    targetWhelImage = "Images/diverse.png"
     let data = await (await fetch("../data/diverse.json")).json();
     gameOptions = {
         slices : data.length,
