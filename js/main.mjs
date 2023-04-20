@@ -35,7 +35,7 @@ if(window.location.search.includes("bevegelse")){
 } 
 
 // once the window loads...
-window.onload = function () {
+
 
     // game configuration object
     var gameConfig = {
@@ -63,7 +63,7 @@ window.onload = function () {
     window.focus()
     resize();
     window.addEventListener("resize", resize, false);
-}
+
 
 // PlayGame scene
 class playGame extends Phaser.Scene {
