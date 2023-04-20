@@ -76,9 +76,9 @@ class playGame extends Phaser.Scene {
     // method to be executed when the scene preloads
     preload() { // loading assets
 
-        this.load.image("wheel", "http://localhost:5500/" + targetWhelImage);
-        this.load.image("pin",  "http://localhost:5500/" + "Images/pin.png");
-        this.load.image("froskbanner", "http://localhost:5500/" + "Images/froskbanner.png");
+        this.load.image("wheel", "https://paddespill.onrender.com/" + targetWhelImage);
+        this.load.image("pin",  "https://paddespill.onrender.com/" + "Images/pin.png");
+        this.load.image("froskbanner", "https://paddespill.onrender.com/" + "Images/froskbanner.png");
 
     }
 
