@@ -34,37 +34,6 @@ if(window.location.search.includes("bevegelse")){
     }
 } 
 
-// once the window loads...
-window.onload = function(){
-
-    // game configuration object
-var gameConfig = {
-
-    // render type
-    type: Phaser.CANVAS,
-
-    // game width, in pixels
-    width: 1280,
-
-    // game height, in pixels
-    height: 720,
-
-    // game background color
-    backgroundColor: 0x880044,
-
-    // scenes used by the game
-    scene: [playGame]
-};
-
-    // game constructor
-    game = new Phaser.Game(gameConfig);
-
-    // pure javascript to give focus to the page/frame and scale the game
-    window.focus()
-    resize();
-    window.addEventListener("resize", resize, false);
-
-}
 // PlayGame scene
 class playGame extends Phaser.Scene {
 
@@ -185,8 +154,6 @@ class playGame extends Phaser.Scene {
     }
 }
 
-
-
 // pure javascript to scale the game
 function resize() {
     var canvas = document.querySelector("canvas");
@@ -203,3 +170,35 @@ function resize() {
         canvas.style.height = windowHeight + "px";
     }
 }
+
+// once the window loads...
+(function(){
+
+    // game configuration object
+var gameConfig = {
+
+    // render type
+    type: Phaser.CANVAS,
+
+    // game width, in pixels
+    width: 1280,
+
+    // game height, in pixels
+    height: 720,
+
+    // game background color
+    backgroundColor: 0x880044,
+
+    // scenes used by the game
+    scene: [playGame]
+};
+
+    // game constructor
+    game = new Phaser.Game(gameConfig);
+
+    // pure javascript to give focus to the page/frame and scale the game
+    window.focus()
+    resize();
+    window.addEventListener("resize", resize, false);
+
+})();
